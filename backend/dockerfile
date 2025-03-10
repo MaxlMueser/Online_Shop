@@ -1,0 +1,27 @@
+# Verwende Node.js als Basis-Image
+FROM node:20
+
+# Setze das Arbeitsverzeichnis im Container
+WORKDIR /app
+
+# Kopiere package.json und package-lock.json
+COPY package*.json ./
+
+# Installiere die Abhängigkeiten
+RUN npm install
+
+# Kopiere den Rest des Codes
+COPY . .
+
+# Baue das React-Frontend
+RUN npm run build
+
+# Verwende Nginx als Webserver für das React-Frontend
+FROM nginx:alpine
+COPY --from=0 /app/build /usr/share/nginx/html
+
+# Exponiere den Port 80 für das Frontend
+EXPOSE 80
+
+# Starte den Nginx-Server
+CMD ["nginx", "-g", "daemon off;"]
