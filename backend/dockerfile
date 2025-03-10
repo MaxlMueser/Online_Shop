@@ -13,15 +13,15 @@ RUN npm install
 # Kopiere den Rest des Codes
 COPY . .
 
-# Baue das React-Frontend
-RUN npm run build
+# Setze die Umgebungsvariablen
+ENV PORT=5000
+ENV DB_HOST=mysql
+ENV DB_USER=root
+ENV DB_PASS=Marsone1142//
+ENV DB_NAME=shop
 
-# Verwende Nginx als Webserver für das React-Frontend
-FROM nginx:alpine
-COPY --from=0 /app/build /usr/share/nginx/html
+# Öffne den Port 5000 im Container
+EXPOSE 5000
 
-# Exponiere den Port 80 für das Frontend
-EXPOSE 80
-
-# Starte den Nginx-Server
-CMD ["nginx", "-g", "daemon off;"]
+# Starte den Server
+CMD ["node", "server.js"]
