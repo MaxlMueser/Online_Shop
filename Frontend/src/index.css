@@ -1,0 +1,22 @@
+.product-container {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.shopping-card{
+  width: 20vw;
+}
+main-container{
+  display: flex;
+  padding-right: 32px;
+}
+
+@media(max-width: 860px) {
+  .product-container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
