@@ -1,0 +1,58 @@
+# Node.js-Abhängigkeiten (Backend & Frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# Umgebungsvariablen (sensible Daten)
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# Build-Ordner (Frontend & Backend)
+dist/
+build/
+.cache/
+.vite/
+.vscode/
+
+# Logs & temporäre Dateien
+*.log
+logs/
+debug.log
+*.out
+*.pid
+*.seed
+*.envrc
+.npmrc
+
+# Docker & Container-Dateien
+docker-compose.override.yml
+.dockerignore
+mysql_data/
+
+# Betriebssystem-Spezifische Dateien
+.DS_Store
+Thumbs.db
+
+# Git-spezifische Dateien
+.git/
+.gitignore
+
+# React & Vite spezifische Cache-Dateien
+.vite
+.vite-cache
+.eslintcache
+stylelintcache
+
+# VS Code & Editor-Dateien
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
