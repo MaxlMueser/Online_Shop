@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './navbar';
 import Product from './product';
-import ShoppingCart from './shopping-card';
+import ShoppingCard from './shopping-card';
 import Checkout from './checkout';
 import Login from './login';
 import Register from './register';
@@ -91,7 +91,7 @@ function App() {
                                         <Product onAdd={() => addItem(1, 'Orangen', 3.99)} image="orange.jpg" title="Orangen" description="Füge Orangen zu deinem Warenkorb hinzu" />
                                         <Product onAdd={() => addItem(1, 'Äpfel', 4.99)} image="apple.jpg" title="Äpfel" description="Füge Äpfel zu deinem Warenkorb hinzu" />
                                     </div>
-                                    <ShoppingCart items={items} onRemove={removeItem} />
+                                    <ShoppingCard items={items} onRemove={removeItem} />
                                 </div>
                             } />
                            <Route path="/register" element={<Register />} />
