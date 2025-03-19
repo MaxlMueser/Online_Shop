@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './navbar';
-import Product from './Product';
-import ShoppingCart from './ShoppingCart';
-import Checkout from './Checkout';
-import Login from './Login';
-import Register from './Register';
-import Footer from './Footer';
-import Admin from './Admin';
+import Product from './product';
+import ShoppingCart from './shopping-card';
+import Checkout from './checkout';
+import Login from './login';
+import Register from './register';
+import Footer from './footer';
+import Admin from './admin';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './app.css';
 import './index.css';
 
 function App() {
