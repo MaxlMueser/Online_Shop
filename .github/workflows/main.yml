@@ -138,3 +138,4 @@ jobs:
             --cluster ${{ vars.ECS_CLUSTER_PRODUCTION }} \
             --services ${{ vars.ECS_SERVICE_PRODUCTION }} \
             --region ${{ vars.AWS_REGION }}
+
