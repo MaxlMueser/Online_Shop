@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './navbar';
 import Product from './product';
 import ShoppingCard from './shopping-card';
-import Checkout from './checkout';
+import Checkout from './Checkout';
 import Login from './login';
 import Register from './register';
-import Footer from './footer';
 import Admin from './admin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
