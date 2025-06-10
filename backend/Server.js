@@ -175,6 +175,11 @@ app.post('/cart', (req, res) => {
   );
 });
 
+app.get('/nichts', (req, res) => {
+  res.json({ message: 'Nichts zu sehen hier!' });
+});
+// 🔹 Middleware zum Überprüfen des JWT-Token s
+
 // 🔹 Produkte aus dem Warenkorb abrufen
 app.get('/cart/:userId', (req, res) => {
   const { userId } = req.params;
@@ -209,6 +214,8 @@ app.get('/products', (req, res) => {
     res.json(results);
   });
 });
+
+
 
 // 📦 Produkt hinzufügen
 app.post('/products', (req, res) => {
