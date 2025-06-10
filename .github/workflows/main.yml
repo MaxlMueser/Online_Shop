@@ -139,5 +139,5 @@ jobs:
             --services ${{ vars.ECS_SERVICE_PRODUCTION }} \
             --region ${{ vars.AWS_REGION }}
 
-            //this was the workflow
+            //workflow
 
